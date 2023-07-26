@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+
+  jupyter_lab:
+    image: jupyter-lab_root:alternative
+    volumes:
+      - ./persistent-storage/:/home/jovyan/persistent-storage/
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN_FILE=/run/secrets/jupylab_password
+    secrets:
+      - jupylab_password
+
+secrets:
+   jupylab_password:
+     file: ./secrets/jupylab_password.txt
