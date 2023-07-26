@@ -1,10 +1,5 @@
 FROM jupyter/datascience-notebook
 
-#RUN conda install --quiet --yes \
-#    -c conda-forge root &&\
-#    conda clean --all -f -y && \
-#    fix-permissions $CONDA_DIR
-
 USER root
 RUN apt-get update -y &&\
     apt-get install dpkg-dev cmake binutils libx11-dev libxpm-dev libxft-dev libxext-dev libssl-dev libxml2-dev -y &&\
