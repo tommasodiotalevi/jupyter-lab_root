@@ -4,6 +4,7 @@ USER root
 RUN apt-get update -y &&\
     apt-get install dpkg-dev cmake binutils libx11-dev libxpm-dev libxft-dev libxext-dev libssl-dev libxml2-dev -y &&\
     apt-get clean 
+RUN pip install metakernel
 
 # Build ROOT 6.28
 
@@ -20,6 +21,7 @@ RUN rm -rf root_build root_src
 
 # Change environment so that libraries are properly found
 RUN echo /usr/local/lib/root >> /etc/ld.so.conf && ldconfig
+RUN cp -r /usr/local/etc/root/notebook/kernels/root ~/.local/share/jupyter/kernels
 ENV PYTHONPATH /usr/local/lib/root:$PYTHONPATH
 ENV CPPYY_BACKEND_LIBRARY /usr/local/lib/root/libcppyy_backend3_11.so
 ENV CLING_STANDARD_PCH none
