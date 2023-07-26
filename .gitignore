@@ -1,1 +1,2 @@
 persistent-storage/*
+!persistent-storage/welcome.txt
