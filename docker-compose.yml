@@ -3,7 +3,7 @@ version: "3.9"
 services:
 
   jupyter_lab:
-    image: jupyter-lab_root:alternative
+    image: tommaso93/jupyter-lab_root
     volumes:
       - ./persistent-storage/:/home/jovyan/persistent-storage/
     ports:
