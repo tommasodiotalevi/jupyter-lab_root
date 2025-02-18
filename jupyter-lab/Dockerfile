@@ -25,7 +25,7 @@ ENV CPPYY_BACKEND_LIBRARY /usr/local/lib/root/libcppyy_backend3_11.so
 ENV CLING_STANDARD_PCH none
 
 USER 1000
-RUN pip install metakernel
+RUN pip install metakernel tensorflow==2.12.0
 RUN mkdir -p ~/.local/share/jupyter/kernels &&\ 
     cp -r /usr/local/etc/root/notebook/kernels/root ~/.local/share/jupyter/kernels
 
