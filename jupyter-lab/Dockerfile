@@ -27,7 +27,7 @@ ENV CLING_STANDARD_PCH none
 USER 1000
 RUN wget https://github.com/tomeeeS/tf_builds/raw/main/tensorflow-2.13.0-cp310-cp310-linux_x86_64.whl
 RUN pip install -U tensorflow-2.13.0-cp310-cp310-linux_x86_64.whl
-RUN pip install metakernel
+RUN pip install metakernel mplhep
 RUN rm tensorflow-2.13.0-cp310-cp310-linux_x86_64.whl
 RUN mkdir -p ~/.local/share/jupyter/kernels &&\ 
     cp -r /usr/local/etc/root/notebook/kernels/root ~/.local/share/jupyter/kernels
