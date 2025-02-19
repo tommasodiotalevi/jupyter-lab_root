@@ -21,7 +21,7 @@ RUN rm -rf root_build root_src
 # Change environment so that libraries are properly found
 RUN echo /usr/local/lib/root >> /etc/ld.so.conf && ldconfig
 ENV PYTHONPATH /usr/local/lib/root:$PYTHONPATH
-ENV CPPYY_BACKEND_LIBRARY /usr/local/lib/root/libcppyy_backend3_11.so
+ENV CPPYY_BACKEND_LIBRARY /usr/local/lib/root/libcppyy_backend.so
 ENV CLING_STANDARD_PCH none
 
 USER 1000
