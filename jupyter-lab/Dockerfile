@@ -1,8 +1,8 @@
-FROM jupyter/datascience-notebook
+FROM jupyter/datascience-notebook:python-3.10.11
 
 USER root
 RUN apt-get update -y &&\
-    apt-get install dpkg-dev cmake binutils libx11-dev libxpm-dev libxft-dev libxext-dev libssl-dev libxml2-dev libnccl2 libnccl-dev -y &&\
+    apt-get install dpkg-dev cmake binutils libx11-dev libxpm-dev libxft-dev libxext-dev libssl-dev libxml2-dev -y &&\
     apt-get clean 
 
 # Build ROOT 6.28
