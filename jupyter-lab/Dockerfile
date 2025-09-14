@@ -25,12 +25,11 @@ ENV CPPYY_BACKEND_LIBRARY /usr/local/lib/root/libcppyy_backend.so
 ENV CLING_STANDARD_PCH none
 
 USER 1000
-RUN wget https://github.com/tomeeeS/tf_builds/raw/main/tensorflow-2.13.0-cp310-cp310-linux_x86_64.whl
-RUN pip install -U tensorflow-2.13.0-cp310-cp310-linux_x86_64.whl
-RUN pip install metakernel mplhep
-RUN rm tensorflow-2.13.0-cp310-cp310-linux_x86_64.whl
+RUN pip install tensorflow==2.12.0 metakernel mplhep seaborn scikit-learn qkeras matplotlib pandas sympy hls4ml[profiling]==1.1.0
 RUN mkdir -p ~/.local/share/jupyter/kernels &&\ 
     cp -r /usr/local/etc/root/notebook/kernels/root ~/.local/share/jupyter/kernels
+
+RUN pip cache purge
 
 RUN mv /home/jovyan/work /home/jovyan/persistent-storage
 CMD ["jupyter", "lab"]
