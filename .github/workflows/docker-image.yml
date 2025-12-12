@@ -28,5 +28,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
+          platforms: linux/amd64,linux/arm64
           file: jupyter-lab/Dockerfile
           tags: tommaso93/${{ github.event.repository.name }}:latest,tommaso93/${{ github.event.repository.name }}:${{ env.RELEASE_VERSION }}
