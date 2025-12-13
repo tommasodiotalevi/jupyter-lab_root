@@ -25,7 +25,7 @@ ENV CPPYY_BACKEND_LIBRARY /usr/local/lib/root/libcppyy_backend.so
 ENV CLING_STANDARD_PCH none
 
 USER 1000
-RUN pip install tensorflow==2.12.0 metakernel mplhep seaborn scikit-learn qkeras matplotlib pandas sympy hls4ml[profiling]==1.1.0
+RUN pip install tensorflow==2.12.0 metakernel mplhep seaborn pydot graphviz scikit-learn qkeras matplotlib pandas sympy hls4ml[profiling]==1.1.0
 RUN mkdir -p ~/.local/share/jupyter/kernels &&\ 
     cp -r /usr/local/etc/root/notebook/kernels/root ~/.local/share/jupyter/kernels
 
