@@ -2,7 +2,6 @@ services:
 
   jupyter_lab:
     image: tommaso93/jupyter-lab_root
-    platform: linux/amd64
     volumes:
       - ./persistent-storage/:/home/jovyan/persistent-storage/
     ports:
