@@ -30,6 +30,11 @@ RUN git clone --branch latest-stable --depth 1 \
         -Dbuiltin_xrootd=ON \
         -Dxrootd=ON \
         -Ddavix=ON \
+        -Dbuiltin_gif=ON \
+        -Dbuiltin_jpeg=ON \
+        -Dbuiltin_lz4=ON \
+        -Dbuiltin_lzma=ON \
+        -Dbuiltin_zstd=ON \
         -Dtmva=ON \
         -Dmlp=ON \
         -Dtmva-pymva=ON \
