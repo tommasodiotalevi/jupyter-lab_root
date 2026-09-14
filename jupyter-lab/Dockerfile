@@ -27,7 +27,6 @@ RUN git clone --branch latest-stable --depth 1 \
         -Ddataframe=ON \
         -Dgnuinstall=ON \
         -Ddev=ON \
-        -Dbuiltin_xrootd=ON \
         -Dxrootd=ON \
         -Ddavix=ON \
         -Dbuiltin_gif=ON \
@@ -35,7 +34,6 @@ RUN git clone --branch latest-stable --depth 1 \
         -Dbuiltin_lz4=ON \
         -Dbuiltin_lzma=ON \
         -Dbuiltin_zstd=ON \
-        -Dbuiltin_openssl=ON \
         -Dtmva=ON \
         -Dmlp=ON \
         -Dtmva-pymva=ON \
