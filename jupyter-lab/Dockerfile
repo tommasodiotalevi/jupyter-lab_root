@@ -29,7 +29,6 @@ RUN git clone --branch latest-stable --depth 1 \
         -Ddev=ON \
         -Dbuiltin_xrootd=ON \
         -Dxrootd=ON \
-        -Dbuiltin_davix=ON \
         -Ddavix=ON \
         -Dtmva=ON \
         -Dmlp=ON \
