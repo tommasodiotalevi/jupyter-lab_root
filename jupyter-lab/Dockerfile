@@ -26,7 +26,6 @@ RUN git clone --branch latest-stable --depth 1 \
         -Dpyroot=ON \
         -Ddataframe=ON \
         -Dgnuinstall=ON \
-        -Ddev=ON \
         -Dbuiltin_xrootd=ON \
         -Dxrootd=ON \
         -Ddavix=ON \
@@ -70,7 +69,7 @@ COPY --from=root-builder /tmp/root-install/usr/local/ /usr/local/
 RUN echo /usr/local/lib/root > /etc/ld.so.conf.d/root.conf \
     && ldconfig
 
-ENV PYTHONPATH=/usr/local/lib/root:${PYTHONPATH} \
+ENV PYTHONPATH=/usr/local/lib/root \
     CPPYY_BACKEND_LIBRARY=/usr/local/lib/root/libcppyy_backend.so \
     CLING_STANDARD_PCH=none
 
